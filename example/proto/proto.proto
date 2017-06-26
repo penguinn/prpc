@@ -1,0 +1,33 @@
+// protoc --gogofaster_out=. protobuf_service.proto
+// mv protobuf_service.pb.go protobuf_service_test.go 
+syntax = "proto3";
+
+package proto;
+
+
+message ProtoArgs { 
+    int32 A = 1;
+    int32 B = 2;
+}
+
+message ProtoReply { 
+    int32 C = 1;
+}
+
+message AuthArgs {
+	string User = 1;
+	string Platform = 2;
+}
+
+message AuthReply {
+	bool Success = 1;
+}
+
+message AddArgs {
+    int32 A = 1;
+    int32 B = 2;
+}
+
+message AddReply {
+    int32 C = 3;
+}
